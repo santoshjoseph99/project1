@@ -63,6 +63,8 @@ class Prerequisite {
 
 public class Project1Scheduler implements Scheduler {
 
+   private static final int MAX_COURSES_PER_SEMESTER = 2;
+
     private static List<Student> readStudentsFile(String fileName){
         BufferedReader br = null;
         List<Student> students = new ArrayList<Student>();
@@ -113,17 +115,35 @@ public class Project1Scheduler implements Scheduler {
          }
          model.update();
 
+         //TODO: objective
+         GRBLinExpr expr = new GRBLinExpr();
+         for(int i = 0; i < students.size(); i++){
+            for(int j = 0; j < Course.MAX_COURSES; j++){
+               for(int k = 0; k < Semester.MAX_SEMESTERS; k++){
+                  expr.addTerm(1, Yijk[i][j][k]);
+               }
+            }
+         }
+         model.setObjective(expr, GRB.MAXIMIZE);
+
+
          //constraints
+
          //students taking courses
          for(int i = 0; i < students.size(); i++){
             Student student = students.get(i);
             int[] courses = student.getCourses();
-            for(int k = 0; k < courses.length; k++){
-
+            for(int k = 0; k < Semester.MAX_SEMESTERS; k++){
+               GRBLinExpr coursesConstraint = new GRBLinExpr();
+               coursesConstraint.addTerm(1, Yijk[i][courses[k]-1][k]);
+               String name = "Course_Student" + student.getName() + "_Semester" + k + "Course" + courses[k];
+               model.addConstr(coursesConstraint, GRB.EQUAL, 1, name);
             }
          }
 
-         //students can only take a class if the prerequiste is taken
+         //TODO: students can only take a class if the prerequiste is taken
+
+         //TODO: course availablity
 
          //students can only take 2 classes per semester
          for(int i = 0; i < students.size(); i++){
@@ -138,27 +158,12 @@ public class Project1Scheduler implements Scheduler {
             }
          }
 
-         //optimize on class size
          model.optimize();
          model.dispose();
          env.dispose();
 
-/*
-            expr = new GRBLinExpr();
-            expr.addTerm( 1, gvarJoeCS6300 );
-            expr.addTerm( 1, gvarJaneCS6300 );
-            expr.addTerm( 1, gvarMaryCS6300 );
-            model.addConstr(expr, GRB.LESS_EQUAL, MAX_CLASS_SIZE, "CS6300" );
-
-            expr = new GRBLinExpr();
-            expr.addTerm( 1, gvarJoeCS6310 );
-            expr.addTerm( 1, gvarJaneCS6310 );
-            expr.addTerm( 1, gvarMaryCS6310 );
-            model.addConstr(expr, GRB.LESS_EQUAL, MAX_CLASS_SIZE, "CS6310" );
-*/
       } catch (GRBException e) {
-         System.out.println("Error code: " + e.getErrorCode() + ". " +
-                         e.getMessage());
+         System.out.println("Error code: " + e.getErrorCode() + ". " + e.getMessage());
       }
     }
 

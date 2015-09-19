@@ -4,3 +4,72 @@ Gurobi 6.0.5 (linux64) logging started Sat Sep 19 09:48:18 2015
 
 Gurobi 6.0.5 (linux64) logging started Sat Sep 19 12:26:33 2015
 
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 13:16:52 2015
+
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 14:41:34 2015
+
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 14:41:41 2015
+
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 14:52:43 2015
+
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 14:59:08 2015
+
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 14:59:37 2015
+
+Optimize a model with 14400 rows, 129600 columns and 216000 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+00]
+  Objective range [0e+00, 0e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 0
+Presolve removed 14400 rows and 129600 columns
+Presolve time: 0.15s
+
+Explored 0 nodes (0 simplex iterations) in 0.17 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0%
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 15:07:31 2015
+
+Optimize a model with 14400 rows, 129600 columns and 136800 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+00]
+  Objective range [0e+00, 0e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 0
+Presolve removed 14400 rows and 129600 columns
+Presolve time: 0.09s
+
+Explored 0 nodes (0 simplex iterations) in 0.12 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0%
+
+Gurobi 6.0.5 (linux64) logging started Sat Sep 19 15:28:47 2015
+
+Optimize a model with 14400 rows, 129600 columns and 136800 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+00]
+  Objective range [1e+00, 1e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 14400
+Presolve removed 14400 rows and 129600 columns
+Presolve time: 0.14s
+
+Explored 0 nodes (0 simplex iterations) in 0.17 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.440000000000e+04, best bound 1.440000000000e+04, gap 0.0%
