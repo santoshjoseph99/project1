@@ -73,3 +73,57 @@ Thread count was 1 (of 2 available processors)
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.440000000000e+04, best bound 1.440000000000e+04, gap 0.0%
+
+Gurobi 6.0.5 (linux64) logging started Sun Sep 20 09:09:40 2015
+
+Optimize a model with 14400 rows, 129600 columns and 136800 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+00]
+  Objective range [1e+00, 1e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 14400
+Presolve removed 14400 rows and 129600 columns
+Presolve time: 0.10s
+
+Explored 0 nodes (0 simplex iterations) in 0.12 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.440000000000e+04, best bound 1.440000000000e+04, gap 0.0%
+
+Gurobi 6.0.5 (linux64) logging started Sun Sep 20 10:32:56 2015
+
+Optimize a model with 14400 rows, 129600 columns and 136800 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+00]
+  Objective range [1e+00, 1e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 14400
+Presolve removed 14400 rows and 129600 columns
+Presolve time: 0.46s
+
+Explored 0 nodes (0 simplex iterations) in 0.56 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.440000000000e+04, best bound 1.440000000000e+04, gap 0.0%
+
+Gurobi 6.0.5 (linux64) logging started Sun Sep 20 11:20:16 2015
+
+Optimize a model with 14400 rows, 129600 columns and 136800 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+00]
+  Objective range [1e+00, 1e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 14400
+Presolve removed 14400 rows and 129600 columns
+Presolve time: 0.32s
+
+Explored 0 nodes (0 simplex iterations) in 0.41 seconds
+Thread count was 1 (of 2 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.440000000000e+04, best bound 1.440000000000e+04, gap 0.0%
